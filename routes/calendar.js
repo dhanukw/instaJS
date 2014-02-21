@@ -1,6 +1,6 @@
 var eventdata = require("../brian1");
-var fs = require('fs');
 
+var fs = require('fs');
 
 exports.eventsuccess = function(req, res){
 
@@ -19,7 +19,7 @@ exports.eventsuccess = function(req, res){
 	eventdata["brian1"].push(newEvent);
 
 	fs.writeFile('brian1.json',JSON.stringify(eventdata, null, 4), function() {
-		
+
 	}
 	)
 	res.render('calendar');

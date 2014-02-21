@@ -12,6 +12,10 @@ exports.calendar = function(req, res){
 	res.render('calendar');
 };
 
+exports.melissacalendar = function(req, res) {
+	res.render('melissacalendar');
+}
+
 exports.welcome = function(req, res){
 	res.render('welcome');
 };
