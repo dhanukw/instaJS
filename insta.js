@@ -32,8 +32,14 @@ app.get('/profile', index.profile);
 app.get('/welcome', index.welcome);
 app.get('/signin', index.signin);
 app.get('/signup', index.signup);
+
 app.get('/calendar', index.calendar);
 app.get('/melissacalendar', index.melissacalendar);
+app.get('/grantcalendar', index.grantcalendar);
+app.get('/briancalendar', index.briancalendar);
+app.get('/snoopcalendar', index.snoopcalendar);
+app.get('/imaginedcalendar', index.imaginedcalendar);
+
 app.get('/addevent', index.addevent);
 app.get('/about', index.about);
 app.get('/addfilter', index.addfilter);
@@ -50,6 +56,10 @@ app.get('/imaginedragonsprofile', profile.imaginedragonsprofile);
 app.get('/melissaprofile', profile.melissaprofile);
 app.get('/events_source', events.events_source);
 app.get('/events_source1', events.events_source1);
+app.get('/events_source2', events.events_source2);
+app.get('/events_source3', events.events_source3);
+app.get('/events_source4', events.events_source4);
+app.get('/events_source5', events.events_source5);
 app.post('/eventsuccess', calendar.eventsuccess);
 
 

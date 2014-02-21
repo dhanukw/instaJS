@@ -14,7 +14,23 @@ exports.calendar = function(req, res){
 
 exports.melissacalendar = function(req, res) {
 	res.render('melissacalendar');
-}
+};
+
+exports.grantcalendar = function(req, res) {
+	res.render('grantcalendar');
+};
+
+exports.briancalendar = function(req, res) {
+	res.render('briancalendar');
+};
+
+exports.snoopcalendar = function(req, res) {
+	res.render('snoopcalendar');
+};
+
+exports.imaginedcalendar = function(req, res) {
+	res.render('imaginedcalendar');
+};
 
 exports.welcome = function(req, res){
 	res.render('welcome');
