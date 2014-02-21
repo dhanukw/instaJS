@@ -13,3 +13,7 @@ exports.snoopprofile = function(req, res){
 exports.imaginedragonsprofile = function(req, res){
 	res.render('imaginedragonsprofile');
 };
+
+exports.melissaprofile = function(req, res){
+	res.render('melissaprofile');
+};
