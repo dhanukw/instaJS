@@ -67,8 +67,3 @@ exports.emptyNoti = function (req, res) {
 exports.profile = function(req, res){
 	res.render('profile');
 };
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 6b9a993b142c7c01b5774c3875ad4c80d1478a29
