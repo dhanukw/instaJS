@@ -3,8 +3,14 @@
         <head>
                 <title>instaCal - Add Filter</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link href = "css/bootstrap.min.css" rel = "stylesheet">
+                <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 <link href = "css/styles.css" rel = "stylesheet">
+                <script src = "js/bootstrap-datetimepicker.min.js"></script>
+                <script src = "js/bootstrap.js"></script>
+                <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+                <link rel="stylesheet" type="text/css" media="screen"
+                 href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
         </head>
         <body>
  
@@ -41,8 +47,9 @@
             </div>
 
             <div class = "container" style="margin-bottom:75px">
+                <form method = "post" action = "eventsuccess">
                 <label for="examplefilter">Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Title" required autofocus>
+                <input name= "title" type="text" class="form-control" id="title" placeholder="Title" required autofocus>
                 <label for="exampleFilters">Privacy</label>
                 <select input type="text" class="form-control" placeholder="">
                     <option>JSON1</option>
@@ -51,89 +58,44 @@
                     <option>Select Friends</option>
                 </select>
                 <p></p>
-                <label for="StartDate">Start Date</label>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <select input type="text" class="form-control" placeholder="Month" id= "startmonth">
-                            <option>Jan</option>
-                            <option>Feb</option>
-                            <option>Mar</option>
-                            <option>Apr</option>
-                            <option>May</option>
-                            <option>Jun</option>
-                            <option>Jul</option>
-                            <option>Aug</option>
-                            <option>Sep</option>
-                            <option>Oct</option>
-                            <option>Nov</option>
-                            <option>Dec</option>
-                        </select>
+
+                <div class="well">
+                    <div id="starttimepicker" class="input-append" placeholder="start time">
+                     <input data-format="yyyy-MM-dd HH:mm:ss PP" type="text" name="starttime"></input>
+                     <span class="add-on">
+                          <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                        </i>
+                      </span>
                     </div>
-                    <div class="col-xs-3">
-                        <input type="text" class="form-control" placeholder="DD" id = 'startdate'>
                     </div>
-                    <div class="col-xs-5">
-                        <input type="text" class="form-control" placeholder="YYYY" id = "startyear">
+                    <script type="text/javascript">
+                    $(function() {
+                     $('#starttimepicker').datetimepicker({
+                         language: 'en',
+                         pick12HourFormat: true
+                      });
+                    });
+                    </script>
+
+                    <div class="well2">
+                     <div id="endtimepicker" class="input-append" placeholder="end time">
+                     <input data-format="yyyy-MM-dd HH:mm:ss PP" type="text" name ="endtime"></input>
+                     <span class="add-on">
+                         <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                         </i>
+                     </span>
                     </div>
-                    <p></p>
-                </div>
-                <p></p>
-                <label for="starttime">Start Time</label>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <input type="timehour" class="form-control" placeholder="12" id="starthour">
                     </div>
-                    <div class="col-xs-4">
-                        <input type="timemins" class="form-control" placeholder="00" id="startminute">
-                    </div>
-                    <div class="col-xs-4">
-                        <select input type="text" class="form-control" placeholder="PM" id="startampm">
-                            <option>AM</option>
-                            <option>PM</option>
-                        </select>
-                    </div>
-                </div>
-                <p></p>
-                <label for="EndDate">End Date</label>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <select input type="text" class="form-control" placeholder="Month" id= "endmonth">
-                                <option>Jan</option>
-                                <option>Feb</option>
-                                <option>Mar</option>
-                                <option>Apr</option>
-                                <option>May</option>
-                                <option>Jun</option>
-                                <option>Jul</option>
-                                <option>Aug</option>
-                                <option>Sep</option>
-                                <option>Oct</option>
-                                <option>Nov</option>
-                                <option>Dec</option>
-                            </select>
-                        </div>
-                        <div class="col-xs-3">
-                            <input type="text" class="form-control" placeholder="DD" id= "enddate">
-                        </div>
-                        <div class="col-xs-5">
-                            <input type="text" class="form-control" placeholder="YYYY" id= "endyear">
-                            <p></p>
-                        </div>
-                    </div>
-        
-                <label for="Endtime">End Time</label>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <input type="timehour" class="form-control" placeholder="01" id= "endhour">
-                        </div>
-                    <div class="col-xs-4">
-                        <input type="timemins" class="form-control" placeholder="00" id= "endminute">
-                    </div>
-                    <div class="col-xs-4">
-                        <select input type="text" class="form-control" placeholder="PM" id= "endampm">
-                            <option>AM</option>
-                            <option>PM</option>
-                        </select>
+                    <script type="text/javascript">
+                     $(function() {
+                      $('#endtimepicker').datetimepicker({
+                          language: 'en',
+                         pick12HourFormat: true
+                     });
+                     });
+                    </script>
+
+                
                         <p></p>
                     </div>
                    
@@ -144,13 +106,14 @@
 
                 <div class="row">
                     <div class="col-xs-6">
-                        <p><a class="btn btn-primary btn-lg" href="eventsuccess" role="button">Create Event</a></p>
+                        <p><input type="submit" class="btn btn-primary btn-lg" role="button">Create Event</input></p>
                     </div>
 
 
                 <div class="col-xs- 5">
                         <p><a class="btn btn-lg btn-danger" href="calendar" role="button">Cancel</a></p>
                 </div>
+            </form>
                
                 
 
@@ -170,10 +133,6 @@
                 </div>
                
             </div>
-
-
-            <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-            <script src = "js/bootstrap.js"></script>
                
         </body>
 </html>

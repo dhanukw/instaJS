@@ -3,8 +3,11 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
+var events = require('./routes/events')
+
 var index = require('./routes/index');
 var profile = require('./routes/profile');
+var calendar = require('./routes/calendar');
 
 var app = express();
 
@@ -44,6 +47,8 @@ app.get('/grantprofile', profile.grantprofile);
 app.get('/snoopprofile', profile.snoopprofile);
 app.get('/imaginedragonsprofile', profile.imaginedragonsprofile);
 app.get('/melissaprofile', profile.melissaprofile);
+app.get('/events_source', events.events_source);
+app.post('/eventsuccess', calendar.eventsuccess);
 
 
 
