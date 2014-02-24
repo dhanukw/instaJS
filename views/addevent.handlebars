@@ -12,9 +12,9 @@
     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 
 </head>
-<body>
+  <body>
 
-    <div class = "navbar navbar-default navbar-static-top">
+    <div class = "navbar navbar-inverse navbar-static-top">
         <div class = "container">
 
             <a href = "index" class = "navbar-brand">instaCal</a>
@@ -36,11 +36,7 @@
                     <li><a href = "notifi">Notifications</a></li>
                     <li><a href = "settings">Settings</a></li>
                     <li><a href = "welcome">Sign out</a></li>
-
-
-
                 </ul>
-
             </div>
 
         </div>
@@ -67,37 +63,35 @@
                       <i data-time-icon="icon-time" data-date-icon="icon-calendar">
                       </i>
                   </span>
-              </div>
-          </div>
+                </div>
+            </div>
           <script type="text/javascript">
-          $(function() {
-           $('#starttimepicker').datetimepicker({
-               language: 'en',
-               pick12HourFormat: true
+              $(function() {
+               $('#starttimepicker').datetimepicker({
+                   language: 'en',
+                   pick12HourFormat: true
+               });
            });
-       });
           </script>
 
           <div class="well2">
             <h3>End time</h3>
-           <div id="endtimepicker" class="input-append" placeholder="end time">
+            <div id="endtimepicker" class="input-append" placeholder="end time">
                <input data-format="yyyy-MM-dd HH:mm:ss PP" type="text" name ="endtime"></input>
                <span class="add-on">
                    <i data-time-icon="icon-time" data-date-icon="icon-calendar">
                    </i>
                </span>
-           </div>
-       </div>
-       <script type="text/javascript">
-       $(function() {
-          $('#endtimepicker').datetimepicker({
-              language: 'en',
-              pick12HourFormat: true
+            </div>
+          </div>
+           <script type="text/javascript">
+           $(function() {
+              $('#endtimepicker').datetimepicker({
+                  language: 'en',
+                  pick12HourFormat: true
+              });
           });
-      });
-       </script>
-
-
+           </script>
        <p></p>
    </div>
 
@@ -119,27 +113,40 @@
 
 
 
+      <div class = "container" >
+        <label for="Notes">Notes</label>
+        <textarea class="form-control" rows="3" id="notes"></textarea>
+
+      <div class="row" style="margin-left:175px" style="margin-bottom:50px">
+        <div class="col-xs-6">
+            <p><input type="submit" class="btn btn-primary btn-lg" role="button"></input></p>
+        </div>
 
 
-
+        <div class="col-xs- 5" >
+            <p><a class="btn btn-lg btn-danger" href="calendar" role="button">Cancel</a></p>
+        </div>
+      </div>
+    </div>
+    </form>
 
 </body>
 
 <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css"/ >
 <script src="jquery.js"></script>
 <script src="jquery.datetimepicker.js"></script>
-<footer>
 
-    <div class = "navbar navbar-inverse navbar-static-bottom" role="navigation" style="margin-top:105px">
+
+    <footer>
+
+    <div class = "navbar navbar-inverse navbar-static-bottom" style="margin-top:105px">
                
                 <div class = "container">
                     <p class = "navbar-text pull-left">&copy;2014 instaCal</p>
                     <p class = "navbar-text pull-right"><a href = "contactus"> Contact </a></p>
                 </div>
                
-      </div>
-
-
+    </div>
     </footer>
 
 
