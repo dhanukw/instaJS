@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
         <head>
-                <title>instaCal </title>
+                <title>instaCal Event </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href = "css/bootstrap.min.css" rel = "stylesheet">
                 <link href = "css/styles.css" rel = "stylesheet">
         </head>
         <body>
  
-            <div class = "navbar navbar-default navbar-static-top">
+            <div class = "navbar navbar-inverse navbar-static-top">
                 <div class = "container">
                                
                     <a href = "index" class = "navbar-brand">instaCal</a>
@@ -24,7 +24,7 @@
                             <ul class = "nav navbar-nav navbar-right">
                                        
                                 <li><a href = "index">Feed</a></li>
-                                <li class = "active"><a href = "friends">Friends</a></li>
+                                <li><a href = "friends">Friends</a></li>
                                 <li><a href = "profile">Profile</a></li>
                                 <li><a href = "calendar">My Calendar</a></li>
                                 <li><a href = "notifi">Notifications</a></li>
@@ -38,14 +38,8 @@
                 </div>
             </div>
             <div class = "container">
-                <h5>Friends</h5>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Search</button>
-                    <p></p>
-                </div>
+                <h5>Event Name</h5>
+            </div>
                
             <div class = "container" style="margin-bottom:75px">
                 {{#each friends}}
@@ -57,27 +51,30 @@
                     <hr></hr>
                 </div>
                 {{/each}}
-             </div>
-         </div>
+            </div>
+
+
+
+
+
+
+			<div class = "navbar navbar-default navbar-static-bottom">
+               
+                <div class = "container">
+                    <p class = "navbar-text pull-left">&copy;2014 instaCal</p>
+
+                    <p class = "navbar-text pull-right"><a href = "contactus"> | Contact </a></p>
+                    <p class = "navbar-text pull-right"><a href = "about"> About | </a></p>
+
+
+                    
+                </div>
+               
+            </div>
 
 
             <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
             <script src = "js/bootstrap.js"></script>
                
         </body>
-
-
-        <footer>
-
-            <div class = "navbar navbar-inverse navbar-static-bottom" role="navigation">
-               
-                <div class = "container">
-                    <p class = "navbar-text pull-left">&copy;2014 instaCal</p>
-                    <p class = "navbar-text pull-right"><a href = "contactus"> Contact </a></p>
-                </div>
-               
-            </div>
-
-
-        </footer>
 </html>
