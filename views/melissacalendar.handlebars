@@ -17,7 +17,11 @@
         
         $('#calendar').fullCalendar({
             editable: true,
-            events: "events_source1"
+            events: "events_source1",
+
+            eventClick: function(calEvent, jsEvent, view) {
+                alert('Event: '+calEvent.title+'\n\n'+'Start Time: '+calEvent.start+'\n\n'+'End Time: '+calEvent.end+'\n\n'+'Notes: ' +calEvent.notes);
+            }
         });
         
     });
@@ -40,6 +44,28 @@
 </style>
 </head>
 <body>
+
+    <div class= "row" style = "margin-left: 400px; margin-bottom: 20px">
+        <div class= "grid_8">
+            <div>
+                <div style = "float: left; display: inline-block; background-color: #1E90FF; padding: 8px; margin-right: 10px">
+                    <input type="checkbox" checked="checked" onclick="reloadCal()" name="f1" id="f1">
+                        <label for="f1">Filter #1</label>
+                </div>
+
+                <div style = "float: left; display: inline-block; background-color: #00BFFF; padding: 8px; margin-right: 10px">
+                    <input type="checkbox" checked="checked" onclick="reloadCal()" name="f2" id="f2">
+                        <label for="f2">Filter #2</label>
+                </div>
+
+                <div style = "float: left; display: inline-block; background-color: #20B2AA; padding: 8px; margin-right: 10px">
+                    <input type="checkbox" checked="checked" onclick="reloadCal()" name="f3" id="f3">
+                        <label for="f3">Filter #3</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <div id='calendar'></div>
 <p></p>
 <div class="row">

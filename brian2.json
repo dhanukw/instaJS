@@ -1,0 +1,29 @@
+{
+    "brian2": [
+        {
+            "title": "Wednesday Shift",
+            "start": "Wed, 19 Feb 2014 03:00:00 PM",
+            "end": "Wed, 19 Feb 2014 08:30:00 PM"
+        },
+        {
+            "title": "Wednesday Shift",
+            "start": "Wed, 26 Feb 2014 03:00:00 PM",
+            "end": "Wed, 26 Feb 2014 08:30:00 PM"
+        },
+        {
+            "title": "Tuesday Shift",
+            "start": "Tue, 18 Feb 2014 03:00:00 PM",
+            "end": "Tue, 18 Feb 2014 08:30:00 PM"
+        },
+        {
+            "title": "Tuesday Shift",
+            "start": "Tue, 25 Feb 2014 03:00:00 PM",
+            "end": "Tue, 25 Feb 2014 08:30:00 PM"
+        },
+        {
+            "title": "Saturday Shift",
+            "start": "Sat, 22 Feb 2014 03:00:00 PM",
+            "end": "Sat, 22 Feb 2014 08:30:00 PM"
+        }
+    ]
+}

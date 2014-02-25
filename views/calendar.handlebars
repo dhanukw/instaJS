@@ -11,18 +11,11 @@
 <script src='js/jquery.min.js'></script>
 <script src='js/jquery-ui.custom.min.js'></script>
 <script src='js/fullcalendar.min.js'></script>
-<script>
 
-    $(document).ready(function() {
-        
-        $('#calendar').fullCalendar({
-            editable: true,
-            events: "events_source"
-        });
-        
-    });
 
-</script>
+
+
+
 <style>
 
     body {
@@ -36,15 +29,93 @@
         width: 360px;
         margin: 0 auto;
         }
-
 </style>
+
 </head>
+
+
+
 <body>
-<div id='calendar'></div>
-<p></p>
-<div class="row">
-<p><a class="btn btn-danger" href="profile" role="button">Back</a></p>
-<p><a class="btn btn-danger" href="addevent" role="button">Add Event</a></p>
+    <div class= "container" style = "margin-left: 350px; margin-bottom: 20px">
+        <div>
+            <div style = "float: left; display: inline-block; background-color: #1E90FF; padding: 8px; margin-right: 10px">
+                <input type="checkbox" checked="checked" onclick="reloadCal()" name="f1" id="f1">
+                    <label for="f1">Filter #1</label>
+            </div>
+
+            <div style = "float: left; display: inline-block; background-color: #00BFFF; padding: 8px; margin-right: 10px">
+                <input type="checkbox" checked="checked" onclick="reloadCal()" name="f2" id="f2">
+                    <label for="f2">Filter #2</label>
+            </div>
+
+            <div style = "float: left; display: inline-block; background-color: #20B2AA; padding: 8px; margin-right: 10px">
+                <input type="checkbox" checked="checked" onclick="reloadCal()" name="f3" id="f3">
+                    <label for="f3">Filter #3</label>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div id='calendar'></div>
+
+        <script type = "text/javascript">
+            var source = new Array();
+            source[0] = '/brian1';
+            source[1] = '/brian2';
+            source[2] = '/brian3';
+
+            var newSource = new Array();
+            newSource[0] = source[0];
+            newSource[1] = source[1];
+            newSource[2] = source[2];
+
+            $(document).ready(loadCal);
+
+            function reloadCal() {
+                newSource[0] = $('#f1').is(':checked') ? '/brian1' : '';
+                newSource[1] = $('#f2').is(':checked') ? '/brian2' : '';
+                newSource[2] = $('#f3').is(':checked') ? '/brian3' : '';
+
+                $('#calendar') 
+                    .fullCalendar('removeEventSource', source[0])
+                    .fullCalendar('removeEventSource', source[1])
+                    .fullCalendar('removeEventSource', source[2])
+                    .fullCalendar('refecthEvents')
+                    .fullCalendar('addEventSource', source[0])
+                    .fullCalendar('addEventSource', source[1])
+                    .fullCalendar('addEventSource', source[2])
+                    .fullCalendar('refetchEvents');
+                
+
+                source[0] = newSource[0];
+                source[1] = newSource[1];
+                source[2] = newSource[2];
+
+            }
+
+            function loadCal() {
+                $('#calendar').fullCalendar({
+                    eventSources: [
+                    source[0],
+                    source[1],
+                    source[2]
+                    ],
+
+                    eventRender: function (event, element) {
+                        element.attr('href', '#');
+                    }
+                });
+            }
+        </script>
+
+
+
+    <p></p>
+    <div class="row">
+        <p><a class="btn btn-danger" href="profile" role="button">Back</a></p>
+        <p><a class="btn btn-danger" href="addevent" role="button">Add Event</a></p>
+    </div>
 </div>
     
 </body>

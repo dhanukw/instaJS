@@ -17,7 +17,11 @@
         
         $('#calendar').fullCalendar({
             editable: true,
-            events: "events_source4"
+            events: "events_source4",
+
+            eventClick: function(calEvent, jsEvent, view) {
+                alert('Event: '+calEvent.title+'\n\n'+'Start Time: '+calEvent.start+'\n\n'+'End Time: '+calEvent.end+'\n\n'+'Notes: ' +calEvent.notes);
+            }
         });
         
     });
