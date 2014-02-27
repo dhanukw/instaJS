@@ -24,6 +24,11 @@
             "title": "Saturday Shift",
             "start": "Sat, 22 Feb 2014 03:00:00 PM",
             "end": "Sat, 22 Feb 2014 08:30:00 PM"
+        },
+        {
+            "title": "Monday shift",
+            "start": "2014-02-10 07:25:29 PM",
+            "end": "2014-02-10 10:25:29 PM"
         }
     ]
 }
