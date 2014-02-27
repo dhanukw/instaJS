@@ -101,10 +101,13 @@
                     source[1],
                     source[2]
                     ],
-
-                    eventRender: function (event, element) {
+                    eventRender: function (event, element){
                         element.attr('href', '#');
+                    },
+                     eventClick: function(calEvent, jsEvent, view) {
+                     alert('Event: '+calEvent.title+'\n\n'+'Start Time: '+calEvent.start+'\n\n'+'End Time: '+calEvent.end+'\n\n'+'Notes: ' +calEvent.notes);
                     }
+                    
                 });
             }
         </script>
