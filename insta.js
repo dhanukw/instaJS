@@ -28,6 +28,7 @@ app.get('/', index.welcome);
 app.get('/index', index.view);
 app.get('/forgot', index.forgot);
 app.get('/friends', index.friends); 
+app.get('/newfriend', index.newfriend); 
 app.get('/profile', index.profile);
 app.get('/welcome', index.welcome);
 app.get('/signin', index.signin);

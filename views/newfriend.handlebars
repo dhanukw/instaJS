@@ -1,78 +1,117 @@
+
 <!DOCTYPE html>
-<html>
-        <head>
-                <title>instaCal - Settings </title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link href = "css/bootstrap.min.css" rel = "stylesheet">
-                <link href = "css/styles.css" rel = "stylesheet">
-        </head>
-        <body>
- 
-            <div class = "navbar navbar-default navbar-static-top">
-                <div class = "container">
-                               
-                    <a href = "index" class = "navbar-brand">instaCal</a>
-                               
-                        <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
-                            <span class = "icon-bar"></span>
-                            <span class = "icon-bar"></span>
-                            <span class = "icon-bar"></span>
-                            
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-                        </button>
-                               
-                        <div class = "collapse navbar-collapse navHeaderCollapse">
-                               
-                            <ul class = "nav navbar-nav navbar-right">
-                                       
-                                <li><a href = "index">Feed</a></li>
-                                <li><a href = "friends">Friends</a></li>
-                                <li><a href = "profile">Profile</a></li>
-                                <li><a href = "calendar">My Calendar</a></li>
-                                <li><a href = "notifi">Notifications</a></li>
-                                <li class = "active"><a href = "settings">Settings</a></li>
-                                <li><a href = "welcome">Sign out</a></li>
+    <title>Course Page</title>
 
-                                
-                                       
-                            </ul>
-                               
-                        </div>
-                               
-                </div>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body>
+
+ <div class = "navbar navbar-default navbar-static-top">
+        <div class = "container">
+
+            <a href = "index" class = "navbar-brand">instaCal</a>
+
+            <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+
+                <ul class = "nav navbar-nav navbar-right">
+
+                    <li class = "active"><a href = "index">Feed</a></li>
+                    <li><a href = "friends">Friends</a></li>
+                    <li><a href = "profile">Profile</a></li>
+                    <li><a href = "calendar">My Calendar</a></li>
+                    <li><a href = "notifi">Notifications</a></li>
+                    <li><a href = "settings">Settings</a></li>
+                    <li><a href = "welcome">Sign out</a></li>
+
+
+
+                </ul>
+
             </div>
-            
-                 <div class="container" style="margin-bottom:25px">
-                    <h4>Settings</h4>
-                    <label for="Oldpsswd">Current Password</label>
-                    <input type="password" class="form-control" placeholder="Current Password" required>
-                    <label for="newpsswd">New Password</label>
-                    <input type="password" class="form-control" placeholder="New Password" required>
-                    <label for="newpsswdconfirm">Confirm New Password</label>
-                    <input type="password" class="form-control" placeholder="New Password" required>
-                    <p></p>
-                    <button class="btn btn-lg btn-success btn-block" href="index" type="submit">Update</button>
-                    <button class="btn btn-lg btn-info btn-block" href="index" type="submit">Cancel</button>
-                </div>
-                
+
+        </div>
+    </div>
 
 
-            <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-            <script src = "js/bootstrap.js"></script>
-               
-        </body>
+ <div class="container">
 
-        <footer>
+ 
+  <div class="input">
+  <input id="filter" type="text" class="form-control" placeholder="Filter Students">
+</div><br>
+  <!-- Classes Info Class -->
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example fixed-box">
+    <!-- Content for classes -->
 
-    <div class = "navbar navbar-inverse navbar-static-bottom" role="navigation" style="margin-top:105px">
-               
-                <div class = "container">
-                    <p class = "navbar-text pull-left">&copy;2014 instaCal</p>
-                    <p class = "navbar-text pull-right"><a href = "contactus"> Contact </a></p>
-                </div>
-               
-      </div>
+ 
+    <table class="table table-hover classmates">
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr id='4'>
+          <td><img src='http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg' height="75px" width="75px" class="img-thumbnail"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+      </tbody>
+    </table>
+     
+
+  </div>
+    <!-- End content for classes -->
+
+      
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/initializeClass.js"></script>
 
 
-    </footer>
+<div class = "navbar navbar-inverse navbar-fixed-bottom">
+
+    <div class = "container">
+        <p class = "navbar-text pull-left">&copy;2014 instaCal</p>
+
+        <p class = "navbar-text pull-right"><a href = "contactus"> | Contact </a></p>
+        <p class = "navbar-text pull-right"><a href = "about"> About |</a></p>
+
+
+
+    </div>
+
+</div>
+
+</body
+
 </html>
