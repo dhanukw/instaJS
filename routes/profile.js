@@ -1,3 +1,7 @@
+var userdata = require("../userdata");
+
+
+
 exports.grantprofile = function(req, res){
 	res.render('grantprofile');
 };
@@ -16,4 +20,17 @@ exports.imaginedragonsprofile = function(req, res){
 
 exports.melissaprofile = function(req, res){
 	res.render('melissaprofile');
+};
+
+exports.signinattempt = function(req, res){
+
+	var eMail = req.body.email;
+	var password = req.body.password;
+
+	if(eMail == userdata.email && password == userdata.password) {
+		res.render('index');
+	}
+	else {
+		res.render('signin');
+	}
 };

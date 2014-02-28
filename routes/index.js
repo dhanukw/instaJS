@@ -48,6 +48,10 @@ exports.friends = function(req, res){
 	res.render('friends', data);
 };
 
+exports.newfriend = function(req, res){
+	res.render('newfriend', data);
+};
+
 exports.forgot = function(req, res){
 	res.render('forgot');
 };

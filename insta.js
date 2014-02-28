@@ -28,6 +28,7 @@ app.get('/', index.welcome);
 app.get('/index', index.view);
 app.get('/forgot', index.forgot);
 app.get('/friends', index.friends); 
+app.get('/newfriend', index.newfriend); 
 app.get('/profile', index.profile);
 app.get('/welcome', index.welcome);
 app.get('/signin', index.signin);
@@ -61,6 +62,7 @@ app.get('/events_source3', events.events_source3);
 app.get('/events_source4', events.events_source4);
 app.get('/events_source5', events.events_source5);
 app.post('/eventsuccess', calendar.eventsuccess);
+app.post('/signinattempt', profile.signinattempt);
 app.get('/multi_source/:event_id', events.multi_source);
 app.get('/event', index.event);
 
