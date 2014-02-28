@@ -3,22 +3,26 @@
         {
             "title": "Hang out with awesome people at The Village",
             "start": "Fri, 21 Feb 2014 13:00:00 PST",
-            "end": "Fri, 21 Feb 2014 15:30:00 PST"
+            "end": "Fri, 21 Feb 2014 15:30:00 PST",
+            "notes": "Like Grant! Boom"
         },
         {
             "title": "Laundry",
             "start": "Tue, 25 Feb 2014 01:00:00 PST",
-            "end": "Tue, 25 Feb 2014 03:30:00 PST"
+            "end": "Tue, 25 Feb 2014 03:30:00 PST",
+            "notes": "This shit is gonna get procrastinated again"
         },
         {
             "title": "Drinking water",
             "start": "27 Feb 2014 17:00:00 PST",
-            "end": "27 Feb 2014 6:30 PM"
+            "end": "27 Feb 2014 6:30 PM",
+            "notes": "Everyone does it"
         },
         {
             "title": "Cogs Group Goes Clubbing",
             "start": "Fri, 28 Feb 2014 20:00:00 PST",
-            "end": "Sat, 29 Feb 2014 02:30:00 PST"
+            "end": "Sat, 29 Feb 2014 02:30:00 PST",
+            "notes": "Wouldn't be caught dead with this group"
         }
     ]
 }
