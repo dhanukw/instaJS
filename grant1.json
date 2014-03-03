@@ -1,28 +1,52 @@
 {
     "grant1": [
         {
-            "title": "Hang out with Dhanuk, LOL JK",
-            "start": "Fri, 21 Feb 2014 13:00:00 PST",
-            "end": "Fri, 21 Feb 2014 15:30:00 PST",
-            "notes": "It's on like DK (Donkey Kong, Lmfao)"
+            "title": "Monday Shift",
+            "start": "Mon, 3 Mar 2014 4:00 PM",
+            "end": "Mon, 3 Mar 2014 8:00 PM",
+            "notes": "On that cash money grind"
         },
         {
-            "title": "Meditation in comatose state",
-            "start": "13 Feb 2014 20:00:00 PST",
-            "end": "17 Feb 2014 02:30:00 PST",
+            "title": "Tuesday Shift",
+            "start": "Tue, 4 Mar 2014 4:00 PM",
+            "end": "Tue, 4 Mar 2014 8:00 PM",
             "notes": "AKA Sleep"
         },
         {
-            "title": "My Mother's Birthday!!",
-            "start": "27 Feb 2014 1:00:00 PST",
-            "end": "27 Feb 2014 11:30 PM",
-            "notes": "Yay! Love you Mom <3"
+            "title": "Monday Shift",
+            "start": "Mon, 10 Mar 2014 4:00 PM",
+            "end": "Mon, 10 Mar 2014 8:00 PM",
+            "notes": "On that cash money grind"
         },
         {
-            "title": "Cogs Group Goes Clubbing",
-            "start": "Fri, 28 Feb 2014 20:00:00 PST",
-            "end": "Sat, 29 Feb 2014 02:30:00 PST",
-            "notes": "Gonna get hammered; right after we finish hitting these people with clubs"
+            "title": "Tuesday Shift",
+            "start": "Tue, 11 Mar 2014 4:00 PM",
+            "end": "Tue, 11 Mar 2014 8:00 PM",
+            "notes": "AKA Sleep"
+        },
+        {
+            "title": "Monday Shift",
+            "start": "Mon, 17 Mar 2014 4:00 PM",
+            "end": "Mon, 17 Mar 2014 8:00 PM",
+            "notes": "On that cash money grind"
+        },
+        {
+            "title": "Tuesday Shift",
+            "start": "Tue, 18 Mar 2014 4:00 PM",
+            "end": "Tue, 18 Mar 2014 8:00 PM",
+            "notes": "AKA Sleep"
+        },
+        {
+            "title": "Monday Shift",
+            "start": "Mon, 24 Mar 2014 4:00 PM",
+            "end": "Mon, 24 Mar 2014 8:00 PM",
+            "notes": "On that cash money grind"
+        },
+        {
+            "title": "Tuesday Shift",
+            "start": "Tue, 25 Mar 2014 4:00 PM",
+            "end": "Tue, 25 Mar 2014 8:00 PM",
+            "notes": "AKA Sleep"
         }
     ]
 }

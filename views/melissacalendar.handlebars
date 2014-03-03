@@ -11,22 +11,57 @@
 <script src='js/jquery.min.js'></script>
 <script src='js/jquery-ui.custom.min.js'></script>
 <script src='js/fullcalendar.min.js'></script>
-<script>
 
-    $(document).ready(function() {
-        
+<script type = "text/javascript">
+    var source = new Array();
+    source[0] = '/multi_source/melissa1';
+    source[1] = '/multi_source/melissa2';
+    
+
+    var newSource = new Array();
+    newSource[0] = source[0];
+    newSource[1] = source[1];
+    
+
+    $(document).ready(loadCal);
+
+    function reloadCal() {
+        newSource[0] = $('#f1').is(':checked') ? '/multi_source/melissa1' : '';
+        newSource[1] = $('#f2').is(':checked') ? '/multi_source/melissa2' : '';
+       
+
+        $('#calendar') 
+        .fullCalendar('removeEventSource', source[0])
+        .fullCalendar('removeEventSource', source[1])
+        .fullCalendar('removeEventSource', source[2])
+        .fullCalendar('refecthEvents')
+        .fullCalendar('addEventSource', newSource[0])
+        .fullCalendar('addEventSource', newSource[1])
+        .fullCalendar('addEventSource', newSource[2])
+        .fullCalendar('refetchEvents');
+
+
+        source[0] = newSource[0];
+        source[1] = newSource[1];
+
+    }
+
+    function loadCal() {
         $('#calendar').fullCalendar({
-            editable: true,
-            events: "events_source1",
-
+            eventSources: [
+            source[0],
+            source[1]
+            ],
+            eventRender: function (event, element){
+                element.attr('href', '#');
+            },
             eventClick: function(calEvent, jsEvent, view) {
-                alert('Event: '+calEvent.title+'\n\n'+'Start Time: '+calEvent.start+'\n\n'+'End Time: '+calEvent.end+'\n\n'+'Notes: ' +calEvent.notes);
-            }
-        });
-        
-    });
+               alert('Event: '+calEvent.title+'\n\n'+'Start Time: '+calEvent.start+'\n\n'+'End Time: '+calEvent.end+'\n\n'+'Notes: ' +calEvent.notes);
+           }
 
-</script>
+       });
+    }
+    </script>
 <style>
 
     body {
@@ -50,23 +85,22 @@
             <div>
                 <div style = "float: left; display: inline-block; background-color: #1E90FF; padding: 8px; margin-right: 10px">
                     <input type="checkbox" checked="checked" onclick="reloadCal()" name="f1" id="f1">
-                        <label for="f1">Filter #1</label>
+                        <label for="f1">Social</label>
                 </div>
 
                 <div style = "float: left; display: inline-block; background-color: #00BFFF; padding: 8px; margin-right: 10px">
                     <input type="checkbox" checked="checked" onclick="reloadCal()" name="f2" id="f2">
-                        <label for="f2">Filter #2</label>
+                        <label for="f2">Cogs TA'ing</label>
                 </div>
 
-                <div style = "float: left; display: inline-block; background-color: #20B2AA; padding: 8px; margin-right: 10px">
-                    <input type="checkbox" checked="checked" onclick="reloadCal()" name="f3" id="f3">
-                        <label for="f3">Filter #3</label>
-                </div>
             </div>
         </div>
     </div>
 
 <div id='calendar'></div>
+<div class="container" align= "center">
+        <a class="btn btn-danger pull-right" alighn = "center-right" href="melissaprofile" role="button">Back</a>
+    </div>
 <p></p>
 <div class="row">
 <p><a class="btn btn-danger" href="melissaprofile" role="button">Back</a></p>
